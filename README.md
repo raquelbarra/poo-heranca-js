@@ -1,4 +1,4 @@
-# 🌳 Jogo de Adivinhação do Número Sorteado - JS
+# 🌳 POO - Herança - JS
 Olá, bem-vindo(a) ao meu perfil no Github.
 Este projeto foi criado para fins de estudo.
 
