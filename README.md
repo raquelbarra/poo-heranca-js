@@ -3,7 +3,7 @@ Olá, bem-vindo(a) ao meu perfil no Github.
 Este projeto foi criado para fins de estudo.
 
 ## Aplicação:
-Resolução do exercício do módulo Programação Orientada a Objetos I, da instituição de ensino ADA (Programa Americanas Polotech).
+Resolução do exercício do módulo Programação Orientada a Objetos I - Professor Carlos Henrique, da instituição de ensino ADA (Programa Americanas Polotech).
 
 ## Tecnologia:
 Javascript
@@ -15,3 +15,5 @@ Javascript
 - Criar classes "Humano" e "Cachorro", ambos devem extender de "Mamifero". Assim como feito anteriormente, crie métodos e atributos para cada um deles.
 - Criar classes de profissões como, por exemplo: "Advogado", "Medico" e "Desenvolvedor" extendo a classe Humano.
 - Criar as classes FrontEnd e BackEnd extendendo desenvolvedor. Cada um deles deve ter métodos próprios e aproveita para adicionar também condicionais, como, por exemplo, o desenvolvedor BackEnd pode ter um método chamado darDesculpa(), onde você gera um número aleatório. Se ele for par, exibe a mensagem "Na minha máquina funciona" e se for impar "Terminei! Falta só testar".
+
+Linkedin: <https://www.linkedin.com/in/raquel-barra/>
