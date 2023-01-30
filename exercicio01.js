@@ -6,11 +6,15 @@ class Animal {
         this.#idade = idade;
     }
     apresentar(){
-        return `Oi! Eu sou um Animal. Meu nome é ${this.nome} e tenho ${this.idade} anos`;
+        return `Oi! Eu sou um Animal. ${this.exibirNome()} e ${this.exibirIdade()}.`;
     } 
 
-    get nome() {
-        return this.#nome;
+    exibirNome() {
+        return `Meu nome é ${this.#nome}`;
+    }
+
+    exibirIdade() {
+        return `tenho ${this.idade} anos`;
     }
 
     get idade() {
@@ -40,7 +44,7 @@ class Mamifero extends Animal {
     }
 
     apresentar(){
-        return `Oi! Eu sou um Mamífero. Meu nome é ${this.nome}, tenho ${this.idade} anos e ${this.amamenta}.`;
+        return `Oi! Eu sou um Mamífero. ${this.exibirNome()}, ${this.exibirIdade()} e ${this.amamenta}.`;
     }
     
     locomover(){
@@ -82,7 +86,7 @@ class Cachorro extends Mamifero {
     }
 
     apresentar(){
-        return `Oi! Eu sou um mamifero do tipo cachorro. Meu nome é ${this.nome}, tenho ${this.idade} anos e ${this.amamenta}. ${this.pedigree}.`;
+        return `Oi! Eu sou um mamifero do tipo cachorro. ${this.exibirNome()}, ${this.exibirIdade()} e ${this.amamenta}. ${this.pedigree}.`;
     }
 }
 
@@ -111,7 +115,7 @@ class Humano extends Mamifero {
     }
 
     apresentar(){
-        return `Oi! Meu nome é ${this.nome}, tenho ${this.idade} anos e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}.`;
+        return `Oi! ${this.exibirNome()}, ${this.exibirIdade()} e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}.`;
     }
 }
 
@@ -135,7 +139,7 @@ class Advogado extends Humano {
     }
 
     apresentar(){
-        return `Oi! Meu nome é ${this.nome}, tenho ${this.idade} anos e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}. ${this.validarOAB()}`;
+        return `Oi! ${this.exibirNome()}, ${this.exibirIdade()} e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}. ${this.validarOAB()}.`;
     }
 
 }
@@ -160,7 +164,7 @@ class Medico extends Humano {
     }
 
     apresentar(){
-        return `Oi! Meu nome é ${this.nome}, tenho ${this.idade} anos e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}. ${this.validarResidencia()}.`;
+        return `Oi! ${this.exibirNome()}, ${this.exibirIdade()} e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}. ${this.validarResidencia()}.`;
     }
 }
 
@@ -183,7 +187,7 @@ class Desenvolvedor extends Humano {
     }
 
     apresentar(){
-        return `Oi! Meu nome é ${this.nome}, tenho ${this.idade} anos e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}. ${this.exibirSO()}.`;
+        return `Oi! ${this.exibirNome()}, ${this.exibirIdade()} e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}. ${this.exibirSO()}.`;
     }
 }
 
@@ -212,7 +216,7 @@ class Backend extends Desenvolvedor {
     }
 
     apresentar(){
-        return `Oi! Meu nome é ${this.nome}, tenho ${this.idade} anos e meu cpf é ${this.cpf}. ${this.exibirSO()}. ${this.exibirLinguagemPreferida()}.`;
+        return `Oi! ${this.exibirNome()}, ${this.exibirIdade()} e meu cpf é ${this.cpf}. ${this.exibirSO()}. ${this.exibirLinguagemPreferida()}.`;
     }
 }
 
@@ -243,13 +247,13 @@ class Frontend extends Desenvolvedor {
     }
 
     apresentar(){
-        return `Oi! Meu nome é ${this.nome}, tenho ${this.idade} anos e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}. ${this.exibirSO()}. ${this.exibirFerramentaPreferida()}`;
+        return `Oi! ${this.exibirNome()}, ${this.exibirIdade()} e meu cpf é ${this.cpf}. ${this.maiorDeIdade()}. ${this.exibirSO()}. ${this.exibirFerramentaPreferida()}`;
     }
 }
 
 // let frontend1 = new Frontend('Raquel',26,33355599912,'Windows','Javascript');
 // console.log(frontend1.apresentar());
-// console.log(`Ótimo desenvolvedor(a), mas: ${frontend1.exibirAtividade()} `);
+// console.log(`Ótimo desenvolvedor(a), mas: ${frontend1.exibirAtividade()}.`);
 
 class Ave extends Animal {
     #voa;
@@ -259,7 +263,7 @@ class Ave extends Animal {
     }   
 
     apresentar(){
-        return `Oi! Eu sou uma Ave. Meu nome é ${this.nome}, tenho ${this.idade} anos e ${this.#voa ? 'vôo' : 'não vôo'}.`;
+        return `Oi! Eu sou uma Ave. ${this.exibirNome()}, ${this.exibirIdade()} e ${this.#voa ? 'vôo' : 'não vôo'}.`;
     }
 
     voar(){
@@ -292,7 +296,7 @@ class Gaviao extends Ave {
     }
 
     apresentar(){
-        return `Oi! Eu sou uma ave do tipo Gavião. Meu nome é ${this.nome}, tenho ${this.idade} anos e minha cor é ${this.#cor}.`;
+        return `Oi! Eu sou uma ave do tipo Gavião. ${this.exibirNome()}, ${this.exibirIdade()} e minha cor é ${this.#cor}.`;
     }
 }
 
@@ -312,7 +316,7 @@ class Peixe extends Animal {
     }
 
     apresentar(){
-        return `Oi! Eu sou um Peixe. Meu nome é ${this.nome}, tenho ${this.idade} anos e sou do grupo ${this.grupo}.`;
+        return `Oi! Eu sou um Peixe. ${this.exibirNome()}, ${this.exibirIdade()} e sou do grupo ${this.grupo}.`;
     } 
     nadar(){
         return "Estou nadando.";
@@ -342,7 +346,7 @@ class Tubarao extends Peixe {
     }
 
     apresentar(){
-        return `Oi! Eu sou um peixe do tipo Tubarão. Meu nome é ${this.nome}, tenho ${this.idade} anos e sou da espécie ${this.especie}.`;
+        return `Oi! Eu sou um peixe do tipo Tubarão. ${this.exibirNome()}, ${this.exibirIdade()} e sou da espécie ${this.especie}.`;
     } 
 }
 
